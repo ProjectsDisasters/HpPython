@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - HP Code Help</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Complete Your Payment</h1>
+        <p>Please enter your credit card details to continue.</p>
+
+        <div class="payment-form">
+            <form id="payment-form">
+                <label for="name">Name on Card:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="month" id="expiry-date" name="expiry-date" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <label for="amount">Amount:</label>
+                <input type="text" id="amount" name="amount" value="30.50 EUR" disabled>
+
+                <!-- Proceed Payment Button -->
+                <button type="button" class="button" id="submit-payment">Submit Payment</button>
+            </form>
+        </div>
+
+        <a href="code-help.html" class="button">Go Back</a>
+    </div>
+
+    <script>
+        // Redirect to the payment success page after successful form submission
+        document.getElementById('submit-payment').addEventListener('click', function() {
+            // Assuming payment is successful, we will redirect to the success page
+            // Normally, you would check if payment was successful here via backend API calls
+            window.location.href = "payment-successful.html"; // Redirect to payment success page
+        });
+    </script>
+</body>
+</html>

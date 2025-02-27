@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Help - HP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Code Help</h1>
+        <p>Hier kun je contact met ons opnemen voor hulp met Python!</p>
+        <a href="index.html" class="button">Terug naar Home</a>
+
+        <!-- Create Account Button -->
+        <a href="account.html" class="button">Create Account</a>
+        
+        <!-- Continue Button (opens Payment System) -->
+        <button id="continueButton" class="button">Continue</button>
+        
+    </div>
+
+    <script>
+        // Continue Button (Opens Payment Page)
+        document.getElementById('continueButton').addEventListener('click', function() {
+            window.location.href = 'payment.html'; // Redirect to payment page
+        });
+    </script>
+</body>
+</html>
